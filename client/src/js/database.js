@@ -22,7 +22,7 @@ export const putDb = async (content) => {
   const req = store.put(content);
   const res = await req;
 
-  console.log('🚀 - data saved to the database', result);
+  console.log('🚀 - data saved to the database', res);
 }
 
 export const getDb = async () => {
@@ -35,8 +35,8 @@ export const getDb = async () => {
   const req = store.getAll();
   const res = await req;
 
-  console.log('result.value', result);
-  return result;
+  console.log('result.value', res);
+  return res;
 }
 
 initdb();
