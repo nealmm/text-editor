@@ -31,10 +31,11 @@ module.exports = () => {
         theme_color: '#225ca3',
         start_url: './',
         publicPath: './',
+        fingerprints: false,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512],
+            size: '96x96',
             destination: path.join('assets', 'icons'),
           }
         ],
