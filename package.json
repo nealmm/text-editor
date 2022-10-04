@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "heroku-prebuild": "npm install --dev",
     "start:dev": "concurrently \"cd server && npm run server\"  \"cd client && npm run build\"",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server node server.js --ignore client",
@@ -20,7 +21,8 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack": "^5.51.1"
   },
   "engines": {
     "node": "17.x"
