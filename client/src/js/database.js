@@ -19,7 +19,7 @@ export const putDb = async (content) => {
   const tx = db.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
 
-  const req = store.put(content);
+  const req = store.put({ id: 1, content: content });
   const res = await req;
 
   console.log('🚀 - data saved to the database', res);
